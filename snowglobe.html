@@ -82,7 +82,30 @@ overflow:hidden;
 .card p{
 padding:10px;
 }
+  
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
 
+.modal img{
+width:600px;
+max-width:90%;
+background:white;
+}
+
+.modal.show{
+display:flex;
+}
+  
 </style>
 </head>
 
@@ -108,6 +131,7 @@ SUSUME DIY
 
 <div class="card">
 <img src="36779F00-8C42-4618-854E-FD72AB2CD470.jpg">
+  onclick="openModal('36779F00-8C42-4618-854E-FD72AB2CD470.jpg')">
 <p>snowglobe 컵1</p>
 </div>
 
@@ -155,5 +179,20 @@ SUSUME DIY
 
 </div>
 
+  <div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImage">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImage').src = src;
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
+</script>
+  
 </body>
 </html>
