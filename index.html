@@ -83,6 +83,29 @@ overflow:hidden;
 padding:10px;
 }
 
+  .modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal img{
+width:400px;
+max-width:90%;
+background:white;
+}
+
+.modal.show{
+display:flex;
+}
+
 </style>
 </head>
 
@@ -107,7 +130,8 @@ SUSUME DIY
 <div class="gallery">
 
 <div class="card">
-<img src="309A9BA9-8354-44FF-99A4-541F1B20890B.jpg">
+<img src="309A9BA9-8354-44FF-99A4-541F1B20890B.jpg"
+     onclick="openModal('309A9BA9-8354-44FF-99A4-541F1B20890B.jpg')">
 <p>LAVA 컵1</p>
 </div>
 
@@ -155,5 +179,20 @@ SUSUME DIY
 
 </div>
 
+  <div id="modal" class="modal" onclick="closeModal()">
+  <img id="modalImage">
+</div>
+
+<script>
+function openModal(src){
+  document.getElementById('modalImage').src = src;
+  document.getElementById('modal').classList.add('show');
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('show');
+}
+</script>
+  
 </body>
 </html>
