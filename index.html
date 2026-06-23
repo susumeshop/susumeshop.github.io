@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>susumeshop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>susume DIY 작품 갤러리</title>
+
+<style>
+body{
+max-width:1000px;
+margin:auto;
+font-family:sans-serif;
+padding:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+border:1px solid #ddd;
+border-radius:10px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+display:block;
+}
+
+.card div{
+padding:15px;
+}
+</style>
 </head>
 <body>
-    <h1>안녕하세요!</h1>
-    <p>제가 만든 첫 susumeshop 사이트입니다.</p>
+
+<h1>susume DIY 작품 갤러리</h1>
+
+<p>
+직접 제작한 다양한 DIY 작품들을 소개합니다.
+</p>
+
+<div class="gallery">
+
+<div class="card">
+<img src="project1.jpg">
+<div>
+<h3>목재 선반</h3>
+<p>원목으로 제작한 수납 선반</p>
+</div>
+</div>
+
+<div class="card">
+<img src="project2.jpg">
+<div>
+<h3>LED 조명</h3>
+<p>아크릴과 LED를 활용한 무드등</p>
+</div>
+</div>
+
+<div class="card">
+<img src="project3.jpg">
+<div>
+<h3>미니어처 하우스</h3>
+<p>수작업으로 제작한 미니어처</p>
+</div>
+</div>
+
+</div>
+
 </body>
 </html>
